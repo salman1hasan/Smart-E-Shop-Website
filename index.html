@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<!-- The 'dark' class will be toggled on this html element -->
 <html lang="en" class="">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SmartShop - Premium Online Store</title>
+    <title>SmartShop - Online Store</title>
     
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -18,13 +17,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <script>
-        // Custom Tailwind configuration
         tailwind.config = {
-            darkMode: 'class', // Enable dark mode using a class
+            darkMode: 'class',
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['Inter', 'sans-serif'], // Set Inter as the default sans-serif font
+                        sans: ['Inter', 'sans-serif'],
                     },
                     keyframes: {
                         // For toast notifications
@@ -53,8 +51,6 @@
     </script>
     
     <style>
-        /* Custom styles for a more premium feel */
-        
         /* Webkit scrollbar styling */
         ::-webkit-scrollbar {
             width: 8px;
@@ -73,16 +69,15 @@
 
         /* Dark mode scrollbar */
         .dark::-webkit-scrollbar-track {
-            background: #2d3748; /* dark:bg-gray-700 */
+            background: #2d3748;
         }
         .dark::-webkit-scrollbar-thumb {
-            background: #4a5568; /* dark:bg-gray-600 */
+            background: #4a5568;
         }
         .dark::-webkit-scrollbar-thumb:hover {
-            background: #718096; /* dark:bg-gray-500 */
+            background: #718096;
         }
         
-        /* Active nav link style */
         .nav-link.active {
             @apply text-blue-600 dark:text-blue-400 border-b-2 border-blue-600 dark:border-blue-400;
         }
@@ -245,7 +240,6 @@
     <!-- Wishlist Modal (Off-canvas) -->
     <div id="wishlist-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-[70] hidden"></div>
     <div id="wishlist-modal" class="off-canvas fixed top-0 right-0 h-full w-full max-w-md bg-white dark:bg-gray-800 shadow-xl z-[80] transform translate-x-full flex flex-col">
-        <!-- Wishlist Header -->
         <div class="flex justify-between items-center p-4 border-b dark:border-gray-700">
             <h2 class="text-2xl font-bold">My Wishlist</h2>
             <button id="wishlist-close-btn" class="text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-white">
@@ -255,8 +249,6 @@
         
         <!-- Wishlist Items -->
         <div id="wishlist-items" class="flex-grow p-4 overflow-y-auto space-y-4">
-            <!-- Wishlist items will be injected here -->
-            <!-- Empty state -->
             <div id="wishlist-empty-state" class="text-center py-10">
                 <i class="fas fa-heart fa-3x text-gray-400"></i>
                 <p class="mt-4 text-gray-500">Your wishlist is empty.</p>
@@ -264,12 +256,11 @@
         </div>
     </div>
 
-    <!-- "Need Help" Widget -->
     <div class="fixed bottom-4 right-4 z-50">
         <button id="help-widget-toggle" class="bg-blue-600 hover:bg-blue-700 text-white rounded-full w-14 h-14 flex items-center justify-center shadow-lg">
             <i class="fas fa-question fa-lg"></i>
         </button>
-        <!-- Help Popup -->
+        
         <div id="help-popup" class="hidden absolute bottom-20 right-0 w-72 bg-white dark:bg-gray-800 rounded-lg shadow-xl border dark:border-gray-700 p-4">
              <div class="flex justify-between items-center mb-2">
                 <h4 class="font-bold">Need Help?</h4>
@@ -294,7 +285,6 @@
     <header class="sticky top-0 z-40 bg-white dark:bg-gray-800 shadow-md w-full">
         <nav class="container mx-auto px-4 py-3">
             <div class="flex justify-between items-center">
-                <!-- Logo -->
                 <a href="#" class="text-3xl font-bold text-blue-600 dark:text-blue-400">
                     <i class="fas fa-store mr-2"></i>SmartShop
                 </a>
@@ -357,18 +347,9 @@
         </nav>
     </header>
 
-    <!-- 
-      =====================================================================
-      MAIN CONTENT AREA
-      =====================================================================
-    -->
     <main class="container mx-auto px-4 py-6">
     
-        <!-- 
-          =====================================================================
-          HOME (SLIDING BANNER)
-          =====================================================================
-        -->
+        <!-- HOME (SLIDING BANNER) -->
         <section id="home" class="scroll-mt-20 mb-12">
             <div class="relative rounded-lg overflow-hidden shadow-2xl h-64 md:h-96">
                 <!-- Slider Wrapper -->
@@ -406,11 +387,7 @@
             </div>
         </section>
         
-        <!-- 
-          =====================================================================
-          USER BALANCE & SPECIAL OFFERS
-          =====================================================================
-        -->
+        <!-- USER BALANCE & SPECIAL OFFERS -->
         <section id="dashboard" class="mb-12 grid grid-cols-1 lg:grid-cols-3 gap-6">
             <!-- User Balance -->
             <div class="lg:col-span-1 bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
@@ -444,11 +421,7 @@
             </div>
         </section>
 
-        <!-- 
-          =====================================================================
-          PRODUCTS
-          =====================================================================
-        -->
+        <!-- PRODUCTS -->
         <section id="products" class="scroll-mt-20 mb-12">
             <h2 class="text-3xl font-bold text-center mb-8">All Products</h2>
             
@@ -519,11 +492,7 @@
             </div>
         </section>
         
-        <!-- 
-          =====================================================================
-          REVIEWS
-          =====================================================================
-        -->
+        <!-- REVIEWS -->
         <section id="reviews" class="scroll-mt-20 mb-12">
             <h2 class="text-3xl font-bold text-center mb-8">Customers Review</h2>
             
@@ -543,11 +512,7 @@
             </div>
         </section>
         
-        <!-- 
-          =====================================================================
-          ABOUT US
-          =====================================================================
-        -->
+        <!-- ABOUT US -->
         <section id="about" class="scroll-mt-20 mb-12 bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg">
             <h2 class="text-3xl font-bold text-center mb-6">About SmartShop</h2>
             <p class="text-center text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-6">
@@ -562,11 +527,7 @@
                 </div>
         </section>
         
-        <!-- 
-          =====================================================================
-          CONTACT US
-          =====================================================================
-        -->
+        <!-- CONTACT US -->
         <section id="contact" class="scroll-mt-20 mb-12 bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg">
             <div class="max-w-xl mx-auto">
                 <h2 class="text-3xl font-bold text-center mb-6">Get in Touch</h2>
@@ -601,11 +562,7 @@
         
     </main>
 
-    <!-- 
-      =====================================================================
-      FOOTER
-      =====================================================================
-    -->
+    <!-- FOOTER -->
     <footer class="bg-gray-800 dark:bg-gray-950 text-gray-300 pt-12">
         <div class="container mx-auto px-4">
             <!-- Newsletter Subscription -->
@@ -674,29 +631,12 @@
         </div>
     </footer>
 
-    <!-- 
-      =====================================================================
-      BACK TO TOP BUTTON
-      =====================================================================
-    -->
+    <!--  BACK TO TOP BUTTON -->
     <button id="back-to-top" class="hidden fixed bottom-24 right-4 z-50 bg-blue-600 hover:bg-blue-700 text-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg transition-opacity">
         <i class="fas fa-arrow-up"></i>
     </button>
     
-
-    <!-- 
-      =====================================================================
-      =====================================================================
-      JAVASCRIPT LOGIC
-      All logic is contained within this script block.
-      =====================================================================
-      =====================================================================
-    -->
     <script type="module">
-        // =====================================================================
-        // STATE AND CONSTANTS
-        // =====================================================================
-        
         // API URLs
         const PRODUCTS_API_URL = 'https://fakestoreapi.com/products';
         // Using a local JSON object for reviews as per project file
@@ -832,9 +772,7 @@
             helpPopupClose: $('#help-popup-close'),
         };
 
-        // =====================================================================
         // INITIALIZATION
-        // =====================================================================
 
         document.addEventListener('DOMContentLoaded', initApp);
 
@@ -929,9 +867,7 @@
             });
         }
         
-        // =====================================================================
         // LOCAL STORAGE & STATE MANAGEMENT
-        // =====================================================================
 
         /**
          * Load all relevant state from localStorage on app start
@@ -967,9 +903,7 @@
             localStorage.setItem(key, JSON.stringify(value));
         }
 
-        // =====================================================================
         // THEME (DARK/LIGHT MODE)
-        // =====================================================================
         
         function toggleTheme() {
             dom.html.classList.toggle('dark');
@@ -977,9 +911,7 @@
             saveState('smartshop_theme', newTheme);
         }
         
-        // =====================================================================
         // AUTHENTICATION (SIMULATED)
-        // =====================================================================
 
         function toggleAuthModal(show) {
             if (show) {
@@ -1063,9 +995,7 @@
             }
         }
 
-        // =====================================================================
         // API & DATA FETCHING
-        // =====================================================================
         
         async function fetchProductsAndCategories() {
             // Show skeletons while fetching
@@ -1096,9 +1026,7 @@
             }
         }
         
-        // =====================================================================
         // PRODUCT RENDERING & FILTERING
-        // =====================================================================
         
         function renderCategories() {
             allCategories.forEach(category => {
@@ -1145,7 +1073,7 @@
         }
         
         function renderProducts(productsToRender) {
-            dom.productContainer.innerHTML = ''; // Clear old products/skeletons
+            dom.productContainer.innerHTML = '';
             
             if (productsToRender.length === 0) {
                 dom.noProductsFound.classList.remove('hidden');
@@ -1236,9 +1164,7 @@
             }
         }
         
-        // =====================================================================
         // CART
-        // =====================================================================
         
         function toggleCartModal(show) {
             if (show) {
@@ -1340,13 +1266,13 @@
             let newQuantity = parseInt(target.value);
             
             if (newQuantity < 1) newQuantity = 1;
-            if (newQuantity > 10) newQuantity = 10; // Stock limit
+            if (newQuantity > 10) newQuantity = 10;
             
             target.value = newQuantity;
             cart[index].quantity = newQuantity;
             
             // Re-check balance
-            const { total } = calculateTotals(); // Get new total *before* saving
+            const { total } = calculateTotals();
             if (total > balance) {
                 // Revert quantity
                 target.value = newQuantity - 1;
@@ -1356,7 +1282,7 @@
                 saveState('smartshop_cart', cart);
             }
             
-            renderCart(); // Re-render to update all prices
+            renderCart();
         }
 
         function updateProductCardButton(productId) {
@@ -1433,9 +1359,7 @@
             showToast('Purchase successful! Thank you.', 'success');
         }
         
-        // =====================================================================
         // WISHLIST
-        // =====================================================================
         
         function toggleWishlistModal(show) {
             if (show) {
@@ -1540,7 +1464,7 @@
             if (cart.some(item => item.id === productId)) return;
             
             // 2. Add to cart
-            handleAddToCart(productId, null); // `null` because we don't need to update the *product card* button
+            handleAddToCart(productId, null);
             
             // 3. Remove from wishlist
             const index = wishlist.findIndex(item => item.id === productId);
@@ -1562,9 +1486,7 @@
             updateProductCardButton(productId);
         }
 
-        // =====================================================================
         // BALANCE
-        // =====================================================================
         
         function handleAddMoney() {
             balance += 1000;
@@ -1578,9 +1500,7 @@
             dom.balanceDisplay.textContent = `BDT ${balance.toFixed(2)}`;
         }
         
-        // =====================================================================
         // SLIDERS & CAROUSELS
-        // =====================================================================
         
         function initMainSlider() {
             const slides = $$('#slider-wrapper .slider-item');
@@ -1669,9 +1589,7 @@
             reviewSlideInterval = setInterval(() => moveReviewSlider('next'), 7000);
         }
 
-        // =====================================================================
         // FORMS (CONTACT & NEWSLETTER)
-        // =====================================================================
         
         function handleContactSubmit(e) {
             e.preventDefault();
@@ -1715,9 +1633,7 @@
             }
         }
 
-        // =====================================================================
         // UI UTILITIES
-        // =====================================================================
 
         /**
          * Show a toast notification
@@ -1778,4 +1694,5 @@
         
     </script>
 </body>
+
 </html>
